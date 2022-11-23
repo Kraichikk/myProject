@@ -1,0 +1,236 @@
+/* Please do not use this import in production. You could download this font from here https://fontstorage.com/font/bernier */
+@import "https://fonts.fontstorage.com/import/bernier.css";
+/*
+	Bernier, 400
+*/
+@font-face {
+	font-family: 'Bernier';
+	src: url('BERNIERRegular-Regular.woff2') format('woff2'), url('BERNIERRegular-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+/* Please do not use this import in production. You could download this font from here https://fontstorage.com/font/open-sans */
+@import "https://fonts.fontstorage.com/import/opensans.css";
+/*
+	Open Sans, 1, 300, 300 italic, 400, 400 italic, 500, 500 italic, 600, 600 italic, 700, 700 italic, 800, 800 italic
+*/
+@font-face {
+	font-family: 'Open Sans';
+	src: url('OpenSans-Light.woff2') format('woff2'), url('OpenSans-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+body{
+    font-family: 'Open Sans';
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
+}
+ul{
+    margin: 0;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 40px);
+    padding: 20px;
+    background-image: url(https://img.freepik.com/premium-photo/kitchen-board-vegetables-with-spices-black-stone-background-top-view-free-space-your-text_187166-23035.jpg?w=2000);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+}
+.header::after{
+    content: "";
+    background: #ffffff;
+    position: absolute;
+    opacity: .65;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all .25s ease;
+}
+
+.nav {
+    width: calc(100% - 40px);
+    position: absolute;
+    z-index: 7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.logo-conteiner{
+    line-height: 1.5;
+}
+
+
+.logo-img{
+    height: 130px;
+    margin: 30px;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+}
+.nav-list-link{
+    position: relative;
+    transition: all .25s ease;
+} 
+.nav-list-link::after{
+    content: "";
+    background: #ebc071;
+    height: 2px;
+    width: 100%;
+    position:absolute;
+    bottom: -8px;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .25s ease;
+}
+.nav-list-link:hover{
+    color:#ebc071 ;
+}
+.nav-list-link:hover:after{
+transform: scaleX(1);
+}
+.nav-list li{
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+.nav-list-link-last{
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0 10px;
+ background-color: #222121;
+ color: white;
+ font-size: 16px;
+ font-weight: bold;
+    transition: all .25s ease;
+}
+
+.fire-svg{
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+    background-color: #ebc071;
+}
+.nav-list-link-last:hover{
+    background-color:#ebc071 ;
+    
+}
+
+.nav-toggle{
+display: none;
+font-size: 2em;
+color: #ffffff;
+}
+
+.burger-button{
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    vertical-align: -0.125em;
+    cursor: pointer;
+}
+
+.heder-content{
+    
+    position: relative;
+    z-index: 1;
+    margin:auto 0 ;
+    padding: 20px;
+}
+.header-content-title{
+    font-family: 'Bernier';
+    padding-top: 50px;
+    margin-top: 140.5px;
+    font-size: 56px;
+    color: rgb(0, 0, 0);
+    line-height: 84px;
+}
+.header-content-title-color{
+    color: #d3983fc4;
+    
+}
+.header-content-btn{
+    position: apsolut;
+    z-index: 5;
+    display: block;
+    background: #000000;
+    color: white;
+    font-size: 14px;
+    font-size: .875rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 100%;
+    min-height: 40px;
+    transition: all .25s ease;
+}
+.header-content-btn:hover{
+    background: #ebc071;
+}
+
+.badge{
+
+    position:relative;
+    bottom: 0;
+    width: 80%;
+    padding-left: 200px;
+    padding-right: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.badge-conteiner{
+    margin: auto;
+    padding-left: 200px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    max-width: 1280px;
+    width: 100%;
+    text-align: right;
+}
+
+.img-logo{
+    width: 110px;
+    transition: all 2s ease;
+}
+
+.img-logo:hover{
+    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 620px){
+  .nav-list{
+    display: none;
+  }  
+  .nav-toggle{
+    display: block;
+  }
+}
